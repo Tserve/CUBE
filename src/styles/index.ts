@@ -4,4 +4,5 @@ import { reset } from "./reset"
 
 export const GlobalStyle = createGlobalStyle`
   ${reset};
+  ${normalize}
 `
