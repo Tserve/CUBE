@@ -2,7 +2,6 @@ import { ReactNode, VFC } from "react"
 import styled from "styled-components"
 import { WIDTH } from "../../../styles/const"
 import { Header } from "../../Header"
-import { Hero } from "../../Hero"
 
 type Props = {
   children: ReactNode
@@ -11,10 +10,7 @@ type Props = {
 export const Layout: VFC<Props> = ({ children }) => (
   <>
     <Header />
-    <StyledMain>
-      <Hero heroImageURL="images/cube.png" />
-      {children}
-    </StyledMain>
+    <StyledMain>{children}</StyledMain>
   </>
 )
 
