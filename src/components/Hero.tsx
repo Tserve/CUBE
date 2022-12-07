@@ -24,6 +24,8 @@ const StyledHero = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 500px;
+  margin-bottom: 30px;
 `
 
 const StyledHeroTitle = styled.h1`
