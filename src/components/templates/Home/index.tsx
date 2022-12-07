@@ -1,6 +1,6 @@
 import { VFC } from "react"
+import { ArticleList } from "../../ArticleList"
 import { Hero } from "../../Hero"
-import { ArticleList } from "../ArticleList"
 import { Layout } from "../Layout"
 
 export const HomeTemplate: VFC = () => (
