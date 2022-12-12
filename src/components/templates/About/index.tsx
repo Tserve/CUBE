@@ -37,12 +37,35 @@ export const AboutTemplate: VFC = () => (
 const StyledArticleContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 60px 0 90px;
+`
+const StyledAsideContact = styled.aside`
+  min-width: 240px;
 `
 
 const StyledArticle = styled.div`
   max-width: 768px;
-`
 
-const StyledAsideContact = styled.aside`
-  min-width: 240px;
+  * + * {
+    margin-top: var(--stack-space, 1.5em);
+  }
+
+  h2,
+  h3 {
+    --stack-space: 2em;
+  }
+
+  h2 + *,
+  h3 + * {
+    --stack-space: 0.8em;
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  ul {
+    padding: revert;
+    list-style: revert;
+  }
 `
