@@ -5,7 +5,11 @@ import { Layout } from "../Layout"
 
 export const HomeTemplate: VFC = () => (
   <Layout>
-    <Hero heroImageURL="images/demo/cube.png" />
+    <Hero
+      heroTitle="CUBE"
+      heroSubText="アウトプットしていくサイト"
+      heroImageURL="images/demo/cube.png"
+    />
     <ArticleList />
   </Layout>
 )
