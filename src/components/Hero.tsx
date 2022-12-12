@@ -2,21 +2,17 @@ import { VFC } from "react"
 import styled from "styled-components"
 
 type Props = {
-  heroTitle?: string
-  heroSubText?: string
-  heroImageURL: string
+  heroTitle: string
+  heroSubText: string
+  heroImageURL?: string
 }
-export const Hero: VFC<Props> = ({
-  heroTitle = "CUBE",
-  heroSubText = "アウトプットしていくサイト",
-  heroImageURL,
-}) => (
+export const Hero: VFC<Props> = ({ heroTitle, heroSubText, heroImageURL }) => (
   <StyledHero>
     <div>
       <StyledHeroTitle>{heroTitle}</StyledHeroTitle>
       <StyledHeroSubTitle>{heroSubText}</StyledHeroSubTitle>
     </div>
-    <img src={heroImageURL} alt={heroTitle} />
+    <img src={heroImageURL} alt={heroImageURL && heroTitle} />
   </StyledHero>
 )
 
