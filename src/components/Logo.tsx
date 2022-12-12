@@ -17,7 +17,7 @@ export const Logo: VFC<Props> = (props) => {
 const StyledLogo = styled.a<{ mode: "transparent" | "colored" }>`
   background-color: ${(props) =>
     props.mode === "transparent" ? props.mode : "#444"};
-  color: #fff;
+  color: ${(props) => (props.mode === "transparent" ? "#000" : "#fff")};
   display: flex;
   align-items: center;
   justify-content: center;
