@@ -67,4 +67,5 @@ const StyledHeaderLink = styled.li`
 
 const StyledHeaderNav = styled.nav`
   width: 215px;
+  margin-right: 4%;
 `
