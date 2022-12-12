@@ -1,35 +1,35 @@
 import Link from "next/link"
 import { VFC } from "react"
 import styled from "styled-components"
+import { Logo } from "./Logo"
+import { Container } from "./templates/Layout/Container"
 
 export const Header: VFC = () => (
   <StyledHeader>
-    <Link href="/">
-      <StyledLogo>
-        CUBE
-        {/* <img src="" alt="CUBE" /> */}
-      </StyledLogo>
-    </Link>
-
-    <StyledHeaderNav>
-      <StyledHeaderLinks>
-        <StyledHeaderLink>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </StyledHeaderLink>
-        <StyledHeaderLink>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </StyledHeaderLink>
-        <StyledHeaderLink>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </StyledHeaderLink>
-      </StyledHeaderLinks>
-    </StyledHeaderNav>
+    <Container large>
+      <StyledHeaderFlexContainer>
+        <Logo mode="colored" />
+        <StyledHeaderNav>
+          <StyledHeaderLinks>
+            <StyledHeaderLink>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+            </StyledHeaderLink>
+            <StyledHeaderLink>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+            </StyledHeaderLink>
+            <StyledHeaderLink>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+            </StyledHeaderLink>
+          </StyledHeaderLinks>
+        </StyledHeaderNav>
+      </StyledHeaderFlexContainer>
+    </Container>
   </StyledHeader>
 )
 
@@ -44,14 +44,15 @@ const StyledLogo = styled.a`
   font-size: 28px;
 `
 
-const StyledHeader = styled.header`
-  max-width: 1280px;
+const StyledHeader = styled.header``
+
+const StyledHeaderFlexContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   height: 93px;
 `
+
 const StyledHeaderLinks = styled.ul`
   display: flex;
   justify-content: space-between;
