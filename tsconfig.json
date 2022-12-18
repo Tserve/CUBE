@@ -1,6 +1,12 @@
 {
   "extends": "./configs/tsconfig/client.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "lib/api.js",
+    "src/@types/globals.d.ts"
+  ],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "incremental": true
