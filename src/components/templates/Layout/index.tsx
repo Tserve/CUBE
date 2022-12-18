@@ -19,4 +19,5 @@ export const Layout: VFC<Props> = ({ children }) => (
 const StyledMain = styled.main`
   max-width: ${WIDTH.CONTAINER};
   margin: 0 auto;
+  padding: 0 64px;
 `
